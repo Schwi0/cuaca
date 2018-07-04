@@ -43,7 +43,7 @@ function cuaca($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Halo Kak ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
+    $result = "Halo Onii-san, Onee-san ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
 	$result .= $json['name'];
 	$result .= " Dan Sekitarnya";
 	$result .= "\n\nCuaca : ";
@@ -60,8 +60,8 @@ function cuaca($keyword) {
 # require_once('./src/function/search-2.php');
 # require_once('./src/function/hard.php');
 
-//show menu, saat join dan command /menu
-if ($type == 'join' || $command == '/menu') {
+//show menu, saat join dan command /imouto
+if ($type == 'join' || $command == '/imouto') {
     $text = "Halo Onii-san, Onee-san. Onii-chan telah menambah fiturku, sekarang aku bisa memprediksi cuaca sesuai dengan BMKG ♡ ♡";
     $balas = array(
         'replyToken' => $replyToken,
