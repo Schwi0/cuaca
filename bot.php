@@ -9,8 +9,8 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'kzUMz+bwuVmNHJ9bFXk0qWYWvXCPL7ERvTo6urExRYIoLkDpvwUEYkFf7j3Q3ySZTHA5qFdj+5w/AniBfxHKsGzObsbVOrGy7oRKly4i6kqJtIcaZgFGMsRZB4oymK61xZiidfDaupZJrHFCG/YuZAdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '1627ecd7dcf0db6c9e9d7074428c8228';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -62,7 +62,7 @@ function cuaca($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Halo Kak ^_^\nAku Bot Prediksi Cuaca, Kamu bisa mengetahui prediksi cuaca di daerah kamu sesuai dengan sumber BMKG";
+    $text = "Halo Onii-san, Onee-san. Onii-chan telah menambah fiturku, sekarang aku bisa memprediksi cuaca sesuai dengan BMKG ♡ ♡";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -97,7 +97,7 @@ if($message['type']=='text') {
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^'										
+										'text' => 'Thanq Onii-san, Onee-san~ ^_^'										
 									
 									)
 							)
