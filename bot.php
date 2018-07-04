@@ -43,7 +43,7 @@ function cuaca($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Halo Onii-san, Onee-san ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
+    $result = "Halo Kak ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
 	$result .= $json['name'];
 	$result .= " Dan Sekitarnya";
 	$result .= "\n\nCuaca : ";
@@ -90,6 +90,20 @@ if($message['type']=='text') {
         );
     }
 
+}else if($message['type']=='sticker')
+{	
+	$balas = array(
+							'replyToken' => $replyToken,														
+							'messages' => array(
+								array(
+										'type' => 'text',									
+										'text' => ''										
+									
+									)
+							)
+						);
+						
+}
 if (isset($balas)) {
     $result = json_encode($balas);
 //$result = ob_get_clean();
